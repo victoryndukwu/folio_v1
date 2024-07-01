@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
-function LoadingScreen() {
+ function LoadingScreen() {
 
     const [visible, setVisible] = useState(true)
     useEffect(() => {

@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./components";
 
-const inter = Inter({ subsets: ["latin"] });
+const quicksand = Quicksand({
+  subsets: ["latin"],
+  variable: '--font-quicksand'
+});
 
 export const metadata: Metadata = {
   title: "Victory Ndukwu | Software Engineer",
@@ -17,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='flex flex-col bg-lightGray'>
+      <body className={`${quicksand.variable} flex flex-col bg-lightGray`}>
         <Navbar />
         {children}</body>
     </html>
