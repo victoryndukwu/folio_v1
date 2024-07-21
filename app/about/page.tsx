@@ -4,7 +4,7 @@ import Image from 'next/image'
 function page() {
   return (
     <section className='grid place-items-center my-5'>
-      <div className='flex flex-col md:w-[70vw]'>
+      <div className='flex flex-col md:w-[70vw] w-[90vw]'>
         <div className='flex'>
           <div className='hidden md:grid place-items-center min-h-[400px] min-w-[300px] mr-10'>
             <Image
@@ -16,14 +16,14 @@ function page() {
           </div>
 
           <div className='text-justify text-sm'>
-            <p className='text-2xl text-lightGray font-medium'>Hi, I am Victory</p>
-            <p>Hello! I am Victory, a passionate frontend engineer with a solid foundation in computer science and over 3 years of professional experience. My journey began with a deep curiosity for crafting intuitive user interfaces that seamlessly blend functionality with aesthetics.</p>
+            <p className='text-2xl text-lightGray font-medium'>Hi, I am Shady</p>
+            <p>
+              a computer science graduate and passionate frontend engineer with over 3 years of experience. I specialize in creating intuitive user interfaces that blend functionality and aesthetics.
 
-            <p>My skill set is versatile, ranging from <strong>Vue JS</strong>, <strong>React JS</strong>, and <strong>Next JS</strong> for robust frontend development, to <strong>Tailwind CSS</strong> and <strong>SCSS</strong> for creating responsive and stylish designs. I thrive in environments that embrace modern technologies, leveraging <strong>Typescript</strong> for enhanced code quality and maintainability.</p>
+              My skills include Vue JS, React JS, Next JS, Tailwind CSS, SCSS, and Typescript. I also enhance user experiences with animations using GSAP and Framer Motion.
 
-            <p>Beyond functionality, I specialize in enhancing user experiences through animations and interactions, utilizing <strong>GSAP</strong> and <strong>Framer Motion</strong> to bring interfaces to life. My goal is to not only meet technical requirements but to exceed user expectations with fluid and engaging web applications.</p>
-
-            <p>As a computer science graduate, I continuously seek opportunities to innovate and improve. Whether collaborating with teams or independently driving projects forward, I approach challenges with creativity and a commitment to excellence.</p>
+              With a passion for innovation and excellence, I thrive in environments embracing modern technologies. Whether collaborating with teams or working independently, I aim to exceed user expectations with engaging web applications.
+            </p>         
           </div>
         </div>
       </div>

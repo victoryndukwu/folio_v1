@@ -7,7 +7,7 @@ function Logo() {
     <Link href='/' className='hover:cursor-pointer'>
       <div className='text-sm flex flex-col gap-[1px]'>
         <p className='font-bold'>VICTORY NDUKWU</p>
-        <p className='text-xs'>FRONTEND ENGINEER</p>
+        <p className='text-xs'>SOFTWAREf ENGINEER</p>
       </div>
     </Link>
   )

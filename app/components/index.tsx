@@ -3,6 +3,7 @@ import ComingSoon from "./ComingSoon";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
 import Container from "./Container";
+import ProjectCard from "./ProjectCard";
 
 
 export {
@@ -10,5 +11,6 @@ export {
     ComingSoon,
     Logo,
     Navbar,
-    Container
+    Container,
+    ProjectCard
 }

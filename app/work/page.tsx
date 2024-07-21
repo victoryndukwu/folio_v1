@@ -1,8 +1,21 @@
 import React from 'react'
+import { ProjectCard } from '../components'
+import { projects } from '../data/data'
 
 function page() {
     return (
-        <div>Work</div>
+        <section className='grid place-items-center my-5 md:mx-[100px]'>
+            <p className='text-base font-semibold'>SELECTED PROJECTS</p>
+            <div className='grid md:grid-cols-3 gap-4 p-4 grid-cols-1'>
+                {
+                    projects.map((project, idx) => (
+                        <div key={idx}>
+                            <ProjectCard imageSrc={project.imgUrl} projectName={project.name} projectLink={project.url} projectDescription={project.description} />
+                        </div>
+                    ))
+                }
+            </div>
+        </section>
     )
 }
 
