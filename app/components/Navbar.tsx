@@ -5,6 +5,7 @@ import Logo from './Logo';
 import { NavMenuItems } from '../data/data';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { michroma } from '@/utils/fonts';
 
 
 function Navbar() {
@@ -13,7 +14,7 @@ function Navbar() {
     const handleDarkTheme = () => setDarkTheme(!darkTheme)
 
     return (
-        <nav className='grid place-items-center py-5'>
+        <nav className={`grid place-items-center py-5 ${michroma.className}`}>
             <div className='flex items-center justify-between w-[90vw]'>
                 <Logo />
                 <div className='md:flex text-darkGray text-base hidden '>
