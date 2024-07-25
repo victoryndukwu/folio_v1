@@ -19,11 +19,11 @@ function Navbar() {
                 <div className='md:flex text-darkGray text-base hidden '>
                     {
                         NavMenuItems.map((item, idx) => (
-                            <Link key={idx} href={item.link} className='hover:cursor-pointer mx-10'>{item.name}</Link>
+                            <Link key={idx} href={item.link} className='hover:cursor-pointer hover:font-semibold mx-10'>{item.name}</Link>
                         ))
                     }
                 </div>
-                <div className='hover:cursor-pointer p-1 border-black border rounded'>
+                <div className='hover:cursor-pointer p-1 border-black border rounded md:hidden'>
                     {/* {darkTheme ?
                         (<Sun onClick={handleDarkTheme} strokeWidth={1} />) :
                         (<Moon onClick={handleDarkTheme} strokeWidth={1} />)} */}

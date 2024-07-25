@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./components";
+import { michroma } from "../utils/fonts";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${quicksand.variable} flex flex-col bg-lightGray`}>
+      <body className={`${quicksand.variable} ${michroma} flex flex-col bg-lightGray`}>
         <Navbar />
         {children}</body>
     </html>

@@ -1,4 +1,11 @@
 import type { Config } from "tailwindcss";
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
+// orbitron
+// gruppo
+// monoton
+// unbounded
+// michroma
 
 const config: Config = {
   content: [
@@ -13,10 +20,15 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      colors:{
-        darkGray: '#45474B',
-        lightGray: '#F5F7F8'
-      }
+      fontFamily: {
+        michroma: ["Michroma", ...fontFamily.sans],
+        secondary: ["Montserrat", ...fontFamily.sans],
+        header: ["Poppins", ...fontFamily.sans],
+      },
+      colors: {
+        darkGray: "#45474B",
+        lightGray: "#F5F7F8",
+      },
     },
   },
   plugins: [],

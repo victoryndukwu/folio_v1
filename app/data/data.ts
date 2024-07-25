@@ -25,7 +25,7 @@ const projects = [
   },
   {
     name: "My Portfolio v1",
-    url: "#",
+    url: "/",
     description: "Victory's Personal Website",
     imgUrl: "/victory.png",
 
