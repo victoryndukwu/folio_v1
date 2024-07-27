@@ -36,7 +36,7 @@ function Navbar() {
 
             {
                 menu && (
-                    <motion.div initial={{ y: -150, opacity: 0 }} animate={{ opacity: 1, y: 0 }} transition={{ type: 'easeIn', delay: .5 }} className='absolute bg-darkGray h-[50vh] w-screen md:hidden top-0 left-0 flex flex-col px-4'>
+                    <motion.div initial={{ y: -150, opacity: 0 }} animate={{ opacity: 1, y: 0 }} transition={{ type: 'easeIn', delay: .1 }} className='absolute bg-darkGray h-screen w-screen md:hidden top-0 left-0 flex flex-col px-4'>
                         <div className='flex justify-end py-4'>
                             <X color='#fff' onClick={() => showMenu(!menu)} />
                         </div>
