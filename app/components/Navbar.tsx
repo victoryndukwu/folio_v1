@@ -40,7 +40,7 @@ function Navbar() {
                         <div className='flex flex-col text-white text-2xl'>
                             {
                                 NavMenuItems.map((item, idx) => (
-                                    <Link key={idx} href={item.link} className='hover:cursor-pointer hover:font-semibold my-5'>{item.name}</Link>
+                                    <Link key={idx} href={item.link} onClick={()=>showMenu(!menu)} className='hover:cursor-pointer hover:font-semibold my-5'>{item.name}</Link>
                                 ))
                             }
                         </div>
