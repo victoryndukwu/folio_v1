@@ -36,17 +36,16 @@ function Navbar() {
 
             {
                 menu && (
-                    <div className='absolute bg-darkGray h-screen w-screen md:hidden top-0 left-0 flex px-4 justify-between'>
-                        <div className='flex flex-col text-white text-2xl'>
+                    <div className='absolute bg-darkGray h-[50vh] w-screen md:hidden top-0 left-0 flex flex-col px-4'>
+                        <div className='flex justify-end py-4'>
+                            <X color='#fff' onClick={() => showMenu(!menu)} />
+                        </div>
+                        <div className='flex flex-col text-white text-2xl justify-center items-center'>
                             {
                                 NavMenuItems.map((item, idx) => (
-                                    <Link key={idx} href={item.link} onClick={()=>showMenu(!menu)} className='hover:cursor-pointer hover:font-semibold my-5'>{item.name}</Link>
+                                    <Link key={idx} href={item.link} onClick={() => showMenu(!menu)} className='hover:cursor-pointer hover:font-semibold my-5'>{item.name}</Link>
                                 ))
                             }
-                        </div>
-
-                        <div className='flex justify-between py-4'>
-                            <X color='#fff' onClick={() => showMenu(!menu)} />
                         </div>
                     </div>
                 )
