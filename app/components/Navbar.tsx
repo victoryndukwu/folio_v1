@@ -30,7 +30,8 @@ function Navbar() {
                     {/* {darkTheme ?
                         (<Sun onClick={handleDarkTheme} strokeWidth={1} />) :
                         (<Moon onClick={handleDarkTheme} strokeWidth={1} />)} */}
-                    <Menu strokeWidth={1} onClick={() => showMenu(!menu)} />
+                    {/* <Menu strokeWidth={1} onClick={() => showMenu(!menu)} /> */}
+                    <p onClick={() => showMenu(!menu)}>MENU</p>
                 </div>
             </div>
 
