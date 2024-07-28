@@ -46,8 +46,8 @@ function ComingSoon() {
                         }}
                         className={`text-justify text-sm text-darkGray w-[90vw] ${quicksand.className}`}>
                         <div className={`flex flex-col text-justify my-2`}>
-                            <p className={`text-base font-medium `}>I am a computer science graduate from Yaba College of Technology and passionate frontend engineer with over 3 years experience. I specialize in creating performant user interfaces that blend functionality and aesthetics. <br /> <br />
-                                My skillset include Vue JS, React JS, Next JS, Tailwind CSS, SCSS, and Typescript. I also enhance user experiences with animations using GSAP and Framer Motion.
+                            <p className={`text-base font-medium `}>Frontend Engineer with over 3 years professional experience building web applications. With a strong foundation in computer science, I specialize in creating performant user interfaces that blend functionality and aesthetics. <br /> <br />
+                                My skillset include React JS, Next JS, Vue JS, Tailwind CSS, SCSS, and Typescript. I also enhance user experiences with seamless animations using GSAP and Framer Motion.
                                 With a passion for innovation and excellence, I thrive in environments embracing modern technologies. Whether collaborating with teams or working independently, I aim to exceed user expectations with engaging web applications. <br /> <br />
                                 <div className="text-start">
                                     <p className={`text-xl font-bold`}>Contact</p>
