@@ -41,10 +41,10 @@ function ThemeSwitch() {
             delay: 3,
             duration: 1,
             type: "easeIn"
-        }} className={`fixed bottom-10 right-5 rounded-full bg-darkGray p-4 shadow-lg ${theme === 'dark' && 'bg-lightGray'}`} onClick={handleTheme}>
+        }} className={`fixed bottom-10 right-5 rounded-full text-darkGray bg-white p-3 shadow-2xl dark:shadow-lightGray dark:bg-darkGray bg-opacity-80 backdrop-blur-[0.5] transition-all`} onClick={handleTheme}>
             {theme === 'light' ?
-                (<Moon strokeWidth={1} className='text-lightGray' />) :
-                (<Sun strokeWidth={1} className='text-darkGray' />)}
+                (<Sun strokeWidth={2} className='text-darkGray' />) :
+                (<Moon strokeWidth={2} className='text-white' />)}
         </motion.button>
     )
 }
