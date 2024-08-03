@@ -10,11 +10,7 @@ import { michroma, unbounded } from '@/utils/fonts';
 
 function Navbar() {
 
-    const [darkTheme, setDarkTheme] = useState(false)
     const [menu, showMenu] = useState(false)
-    const handleDarkTheme = () => setDarkTheme(!darkTheme)
-
-
     return (
         <nav className={`grid place-items-center py-5 ${unbounded.className}`}>
             <div className='flex items-center justify-between w-[90vw]'>
@@ -27,10 +23,6 @@ function Navbar() {
                     }
                 </div>
                 <div className='hover:cursor-pointer p-1 border-black border rounded md:hidden'>
-                    {/* {darkTheme ?
-                        (<Sun onClick={handleDarkTheme} strokeWidth={1} />) :
-                        (<Moon onClick={handleDarkTheme} strokeWidth={1} />)} */}
-                    {/* <Menu strokeWidth={1} onClick={() => showMenu(!menu)} /> */}
                     <p onClick={() => showMenu(!menu)}>MENU</p>
                 </div>
             </div>
@@ -51,7 +43,6 @@ function Navbar() {
                     </motion.div>
                 )
             }
-
         </nav>
     )
 }

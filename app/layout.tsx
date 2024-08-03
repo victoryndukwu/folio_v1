@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "./components";
+import ThemeSwitch from "./components/ThemeSwitch";
 
 export const metadata: Metadata = {
   title: "Victory Ndukwu | Frontend Engineer",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className={`flex flex-col bg-lightGray`}>
         <Navbar />
         {children}</body>
+      <ThemeSwitch />
     </html>
   );
 }

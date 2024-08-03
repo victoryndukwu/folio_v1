@@ -17,7 +17,6 @@ function ComingSoon() {
                         animate={{
                             opacity: 1,
                             x: -20
-
                         }}
                         transition={{
                             delay: 3,
@@ -31,6 +30,7 @@ function ComingSoon() {
                             alt='A portrait of myself'
                             width={500}
                             height={700}
+                            priority={true}
                         />
                     </motion.div>
 
