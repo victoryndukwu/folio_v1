@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`flex flex-col bg-lightGray`}>
+      <body className={`flex flex-col bg-lightGray text-darkGray dark:bg-darkGray dark:text-lightGray`}>
         <Navbar />
         {children}</body>
       <ThemeSwitch />
