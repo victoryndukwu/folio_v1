@@ -17,7 +17,6 @@ function ComingSoon() {
                         animate={{
                             opacity: 1,
                             x: -20
-
                         }}
                         transition={{
                             delay: 3,
@@ -31,6 +30,7 @@ function ComingSoon() {
                             alt='A portrait of myself'
                             width={500}
                             height={700}
+                            priority={true}
                         />
                     </motion.div>
 
@@ -44,7 +44,7 @@ function ComingSoon() {
                             delay: 3.5,
                             type: "easeOut"
                         }}
-                        className={`text-justify text-sm text-darkGray w-[90vw] ${quicksand.className}`}>
+                        className={`text-justify text-sm w-[90vw] ${quicksand.className}`}>
                         <div className={`flex flex-col text-justify my-2`}>
                             <p className={`text-base font-medium `}>Frontend Engineer with over 3 years professional experience building web applications. With a strong foundation in computer science, I specialize in creating performant user interfaces that blend functionality and aesthetics. <br /> <br />
                                 My skillset include React JS, Next JS, Vue JS, Tailwind CSS, SCSS, and Typescript. I also enhance user experiences with seamless animations using GSAP and Framer Motion.
