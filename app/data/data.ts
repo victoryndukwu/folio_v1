@@ -7,7 +7,7 @@ const NavMenuItems = [
     name: "WORK",
     link: "/work",
   },
-];
+] as const;
 
 const projects = [
   {
@@ -30,6 +30,6 @@ const projects = [
     imgUrl: "/victory.png",
 
   },
-];
+] as const;
 
 export { NavMenuItems, projects };
