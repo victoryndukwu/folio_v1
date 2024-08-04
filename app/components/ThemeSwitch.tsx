@@ -21,11 +21,11 @@ function ThemeSwitch() {
 
     useEffect(() => {
         const themeStorage = localStorage.getItem('theme') as Theme | null;
-        if (themeStorage){
+        if (themeStorage) {
             setTheme(themeStorage)
-            if ( themeStorage === 'dark'){
+            if (themeStorage === 'dark') {
                 document.documentElement.classList.add('dark')
-            } else{
+            } else {
                 document.documentElement.classList.remove('dark')
             }
         }
@@ -41,10 +41,10 @@ function ThemeSwitch() {
             delay: 3,
             duration: 1,
             type: "easeIn"
-        }} className={`fixed bottom-10 right-5 rounded-full text-darkGray bg-white p-3 shadow-2xl dark:shadow-lightGray dark:bg-darkGray bg-opacity-80 backdrop-blur-[0.5] transition-all cursor-pointer`} onClick={handleTheme}>
+        }} className={`fixed outline-none bottom-10 right-5 rounded-full text-darkGray bg-white p-3 shadow-2xl dark:shadow-lightGray dark:bg-darkerGray bg-opacity-80 backdrop-blur-[0.5] transition-all cursor-pointer`} onClick={handleTheme}>
             {theme === 'light' ?
                 (<Sun strokeWidth={2} className='text-darkGray' />) :
-                (<Moon strokeWidth={2} className='text-white' />)}
+                (<Moon strokeWidth={2} className='text-lightGray' />)}
         </motion.button>
     )
 }
