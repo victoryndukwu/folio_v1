@@ -15,7 +15,7 @@ function ProjectCard({ imageSrc, projectName, projectLink, projectDescription }:
 
 
     return (
-        <div className={`bg-white p-2 rounded-[10px] md:w-[320px] md:h-[220px] w-[90vw] ${unbounded.className}`}>
+        <div className={`bg-white dark:bg-black dark:text-lightGray p-2 rounded-[10px] md:w-[320px] md:h-[220px] w-[90vw] ${unbounded.className}`}>
             <NextLink href={projectLink} target='_blank'>
                 <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ type: 'easeIn' }} className='bg-slate-600 md:max-h-[135px] max-h-[150px]'>
                     <Image
