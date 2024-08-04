@@ -31,7 +31,7 @@ function Navbar() {
                 menu && (
                     <motion.div initial={{ y: -150, opacity: 0 }} animate={{ opacity: 1, y: 0 }} transition={{ type: 'easeIn', delay: .1 }} className='absolute h-screen w-screen md:hidden top-0 left-0 flex flex-col px-4 bg-lightGray text-darkGray dark:bg-darkGray dark:text-lightGray'>
                         <div className='flex justify-end py-4'>
-                            <X onClick={() => showMenu(!menu)}  className='text-darkGray dark:text-lightGray'/>
+                            <X onClick={() => showMenu(!menu)} className='text-darkGray dark:text-lightGray' />
                         </div>
                         <div className='flex flex-col text-2xl justify-center items-center '>
                             {
