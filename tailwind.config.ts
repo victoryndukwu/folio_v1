@@ -26,8 +26,10 @@ const config: Config = {
         header: ["Poppins", ...fontFamily.sans],
       },
       colors: {
-        darkGray: "#45474B",
+        gray: "#ecebeb",
         lightGray: "#F5F7F8",
+        darkGray: "#45474B",
+        darkerGray: "#1e1e1e",
       },
     },
   },
