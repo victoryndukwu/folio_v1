@@ -1,5 +1,5 @@
 import LoadingScreen from "./LoadingScreen";
-import ComingSoon from "./ComingSoon";
+import Landing from "./Landing";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
 import Container from "./Container";
@@ -8,7 +8,7 @@ import ProjectCard from "./ProjectCard";
 
 export {
     LoadingScreen,
-    ComingSoon,
+    Landing,
     Logo,
     Navbar,
     Container,

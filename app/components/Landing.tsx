@@ -4,7 +4,8 @@ import Image from 'next/image'
 import { easeIn, easeOut, motion } from 'framer-motion'
 import { michroma, unbounded, quicksand } from '@/utils/fonts'
 
-function ComingSoon() {
+function 
+ComingSoon() {
     return (
         <section className='grid place-items-center my-5'>
             <div className='flex flex-col md:w-[70vw] md-[90vw]'>
