@@ -1,8 +1,9 @@
 "use client";
+
 import React, { useState } from "react";
-import { X, Mail, Check } from "lucide-react";
+import { Check, Mail, Menu, X } from "lucide-react";
 import Logo from "./Logo";
-import { NavMenuItems } from "../data/data";
+import { contactEmail, NavMenuItems } from "../data/data";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -12,12 +13,12 @@ function Navbar() {
 
   const copyEmail = async () => {
     try {
-      await navigator.clipboard.writeText("victoryndukwu7@gmail.com");
+      await navigator.clipboard.writeText(contactEmail);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000); 
     } catch (err) {
       const textArea = document.createElement("textarea");
-      textArea.value = "victoryndukwu7@gmail.com";
+      textArea.value = contactEmail;
       document.body.appendChild(textArea);
       textArea.select();
       document.execCommand("copy");
@@ -37,98 +38,79 @@ function Navbar() {
 
   return (
     <div className="fixed top-6 z-50 w-full flex justify-center px-4 pointer-events-none">
-      <nav className="pointer-events-auto backdrop-blur-2xl bg-white/40 dark:bg-black/40 border border-black/5 dark:border-white/10 rounded-full py-3 px-6 shadow-2xl transition-all duration-300 hover:bg-white/60 dark:hover:bg-black/60">
-        <div className="flex items-center gap-8">
+      <nav className="pointer-events-auto w-full max-w-4xl backdrop-blur-2xl bg-white/55 dark:bg-black/45 border border-black/5 dark:border-white/10 rounded-full py-2 pl-3 pr-2 shadow-2xl transition-all duration-300 hover:bg-white/70 dark:hover:bg-black/60">
+        <div className="flex items-center justify-between gap-4">
           <Logo />
 
-          {/* Desktop Nav */}
-          <div className="md:flex text-sm hidden font-medium">
-          {NavMenuItems.map((item, idx) => (
-            <div key={idx}>
-              {item.name === "victoryndukwu7@gmail.com" ? (
-                <button
-                  onClick={copyEmail}
-                  className="hover:cursor-pointer hover:font-semibold mx-10 flex items-center gap-2 transition-all duration-200 group"
-                  title="Click to copy email"
-                >
-                  <span className="group-hover:text-blue-600 transition-colors">
-                    {item.name}
-                  </span>
-                  {copied ? (
-                    <Check className="w-4 h-4 text-green-500" />
-                  ) : (
-                    <item.icon className="w-4 h-4 group-hover:text-blue-600 transition-colors" />
-                  )}
-                </button>
-              ) : (
-                <Link
-                  href={item.link}
-                  className="hover:cursor-pointer hover:font-semibold mx-10 flex items-center gap-2"
-                >
-                  <span>{item.name}</span>
-                  {item.icon && <item.icon className="w-4 h-4" />}
-                </Link>
-              )}
-            </div>
-          ))}
+          <div className="hidden md:flex items-center gap-1 text-sm font-medium">
+            {NavMenuItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.link}
+                className="rounded-full px-4 py-2 text-darkGray transition-colors duration-300 hover:bg-black/5 hover:text-accentBlue dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white"
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="hover:cursor-pointer p-1 md:hidden">
-            <p onClick={() => showMenu(!menu)}>MENU</p>
-          </div>
+          <button
+            onClick={copyEmail}
+            className="group hidden md:flex items-center gap-2 rounded-full bg-black px-4 py-2 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-accentBlue hover:shadow-lg hover:shadow-accentBlue/25 active:translate-y-0 dark:bg-white dark:text-black dark:hover:bg-accentBlue dark:hover:text-white"
+            title="Copy email"
+          >
+            {copied ? <Check className="h-4 w-4 text-green-400" /> : <Mail className="h-4 w-4" />}
+            {copied ? "Copied" : "Email"}
+          </button>
+
+          <button
+            onClick={() => showMenu(!menu)}
+            className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white/70 text-darkGray shadow-sm transition-all duration-300 hover:border-accentBlue/40 hover:text-accentBlue dark:border-white/10 dark:bg-white/10 dark:text-white md:hidden"
+            aria-label="Open navigation menu"
+          >
+            <Menu className="h-5 w-5" />
+          </button>
         </div>
       </nav>
 
-      {/* Mobile Nav */}
       {menu && (
         <motion.div
           initial={{ y: -150, opacity: 0 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "easeIn", delay: 0.1 }}
-          className="absolute h-screen w-screen md:hidden top-0 left-0 flex flex-col px-4 bg-lightGray text-darkGray dark:bg-darkGray dark:text-lightGray"
+          transition={{ duration: 0.35, ease: "easeOut" }}
+          className="absolute h-screen w-screen md:hidden top-0 left-0 flex flex-col px-4 bg-lightGray text-darkGray dark:bg-[#050505] dark:text-lightGray pointer-events-auto"
         >
           <div className="flex justify-end py-4">
-            <X
+            <button
               onClick={() => showMenu(!menu)}
-              className="text-darkGray dark:text-lightGray cursor-pointer"
-            />
+              className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white/70 dark:border-white/10 dark:bg-white/10"
+              aria-label="Close navigation menu"
+            >
+              <X className="h-5 w-5" />
+            </button>
           </div>
 
-          <div className="flex flex-col text-sm justify-center items-center">
-            {NavMenuItems.map((item, idx) => (
-              <div key={idx}>
-                {item.name === "victoryndukwu7@gmail.com" ? (
-                  <button
-                    onClick={(e) => handleEmailClick(e, true)}
-                    className="hover:cursor-pointer hover:font-semibold my-5 flex items-center gap-2 transition-all duration-200 group w-full justify-center"
-                  >
-                    <span className="group-hover:text-blue-600 transition-colors">
-                      {item.name}
-                    </span>
-                    {copied ? (
-                      <Check className="w-4 h-4 text-green-500" />
-                    ) : (
-                      <item.icon className="w-4 h-4 text-darkGray dark:text-lightGray group-hover:text-blue-600 transition-colors" />
-                    )}
-                  </button>
-                ) : (
-                  <Link
-                    href={item.link}
-                    onClick={() => showMenu(!menu)}
-                    className="hover:cursor-pointer hover:font-semibold my-5 flex items-center gap-2"
-                  >
-                    <span>{item.name}</span>
-                    {item.icon && (
-                      <item.icon className="w-4 h-4 text-darkGray dark:text-lightGray" />
-                    )}
-                  </Link>
-                )}
-              </div>
+          <div className="flex flex-1 flex-col items-center justify-center gap-6 text-4xl font-semibold font-header">
+            {NavMenuItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.link}
+                onClick={() => showMenu(false)}
+                className="transition-colors duration-300 hover:text-accentBlue"
+              >
+                {item.name}
+              </Link>
             ))}
+
+            <button
+              onClick={(e) => handleEmailClick(e, true)}
+              className="mt-4 flex items-center gap-3 rounded-full bg-black px-6 py-3 text-base font-semibold font-primary text-white transition-all duration-300 hover:bg-accentBlue dark:bg-white dark:text-black dark:hover:bg-accentBlue dark:hover:text-white"
+            >
+              {copied ? <Check className="h-5 w-5 text-green-400" /> : <Mail className="h-5 w-5" />}
+              {copied ? "Email copied" : "Copy email"}
+            </button>
           </div>
 
-          {/* Copy feedback for mobile */}
           {copied && (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -141,7 +123,6 @@ function Navbar() {
         </motion.div>
       )}
 
-      {/* Copy feedback for desktop */}
       {copied && (
         <motion.div
           initial={{ opacity: 0, y: 10 }}

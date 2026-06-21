@@ -7,9 +7,6 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 function ProjectSection() {
-  const leftColumnProjects = projects.filter((_, idx) => idx % 2 === 0);
-  const rightColumnProjects = projects.filter((_, idx) => idx % 2 === 1);
-
   const columnVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -35,31 +32,20 @@ function ProjectSection() {
     },
   };
 
-  const rightItemVariants = {
-    hidden: {
-      opacity: 0,
-      x: 50,
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.7,
-        ease: "easeOut",
-      },
-    },
-  };
-
   return (
     <section className="flex flex-col w-full">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
+        className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between"
       >
-        <Heading align="left" weight="normal" italic>
-          Work
+        <Heading align="left" weight="normal" italic className="font-header text-2xl">
+          Selected Work
         </Heading>
+        <p className="max-w-md text-sm leading-6 text-darkGray/75 dark:text-white/55">
+          A few product surfaces and web experiences shaped around clarity, speed, and polish.
+        </p>
       </motion.div>
 
       <div className="flex flex-col gap-8 mt-8">
@@ -69,7 +55,7 @@ function ProjectSection() {
           initial="hidden"
           animate="visible"
         >
-          {projects.slice(0, 2).map((project, idx) => {
+          {projects.slice(0, 3).map((project, idx) => {
             const isFeatured = idx === 0;
             return (
               <motion.div

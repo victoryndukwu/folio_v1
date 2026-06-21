@@ -7,6 +7,8 @@ import ProjectCard from "./ProjectCard";
 import Footer from "./Footer";
 import TechStackSection from "./sections/tech-stack-section";
 import CTASection from "./sections/cta-section";
+import ProofStripSection from "./sections/proof-strip-section";
+import AboutPreviewSection from "./sections/about-preview-section";
 
 export {
     LoadingScreen,
@@ -17,5 +19,7 @@ export {
     ProjectCard,
     Footer,
     TechStackSection,
-    CTASection
+    CTASection,
+    ProofStripSection,
+    AboutPreviewSection
 }

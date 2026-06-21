@@ -2,13 +2,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
+import { contactEmail } from "@/app/data/data";
 
 function CTASection() {
   const [copied, setCopied] = useState(false);
 
   const copyEmail = async () => {
     try {
-      await navigator.clipboard.writeText("victoryndukwu7@gmail.com");
+      await navigator.clipboard.writeText(contactEmail);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
@@ -29,11 +30,11 @@ function CTASection() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-accent/20 dark:bg-accent/30 blur-[80px] rounded-full pointer-events-none" />
 
         <h2 className="text-3xl md:text-5xl font-bold font-header text-black dark:text-white mb-6 relative z-10">
-          Ready to build something amazing?
+          Need a frontend partner for your next product push?
         </h2>
         
         <p className="text-lg text-darkGray dark:text-white/70 max-w-lg mb-10 relative z-10">
-          I'm currently open to new opportunities. Let's discuss how my experience can support your goals.
+          I can help turn product ideas, messy interfaces, or ambitious launch timelines into polished web experiences.
         </p>
 
         <button

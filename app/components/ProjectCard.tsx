@@ -1,48 +1,102 @@
-'use client'
-import React from 'react'
-import Image from 'next/image'
-import NextLink from 'next/link'
-import { motion } from 'framer-motion'
-import { unbounded } from '@/utils/fonts'
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import NextLink from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 type ProjectCardProps = {
-    imageSrc: string,
-    projectName: string,
-    projectLink: string,
-    projectDescription: string,
-    isFeatured?: boolean,
-}
-function ProjectCard({ imageSrc, projectName, projectLink, projectDescription, isFeatured = false }: ProjectCardProps) {
+  imageSrc: string;
+  projectName: string;
+  projectLink: string;
+  projectDescription: string;
+  isFeatured?: boolean;
+};
 
+function ProjectCard({
+  imageSrc,
+  projectName,
+  projectLink,
+  projectDescription,
+  isFeatured = false,
+}: ProjectCardProps) {
+  const isExternalProject = /^https?:\/\//.test(projectLink);
 
-    return (
-        <div className={`group relative bg-white/50 dark:bg-white/5 border border-black/5 dark:border-white/10 p-2 md:p-3 rounded-[24px] w-full shadow-lg backdrop-blur-2xl transition-all duration-500 hover:bg-white/80 dark:hover:bg-white/10 font-primary overflow-hidden ${isFeatured ? "md:h-[360px]" : "h-[300px]"}`}>
-            <NextLink href={projectLink} target='_blank' className="flex flex-col h-full relative z-10">
-                <div className="relative w-full h-full rounded-[18px] overflow-hidden bg-black/5 dark:bg-white/5">
-                    <Image
-                        src={imageSrc}
-                        alt={`${projectName} thumbnail`}
-                        fill
-                        className="object-cover group-hover:scale-105 group-hover:blur-[2px] group-hover:brightness-75 transition-all duration-500 ease-out"
-                    />
-                    
-                    {/* Hover Overlay Button */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <span className="bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-full font-semibold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                            View Project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-                        </span>
-                    </div>
-                </div>
+  return (
+    <NextLink
+      href={projectLink}
+      target={isExternalProject ? "_blank" : undefined}
+      rel={isExternalProject ? "noreferrer" : undefined}
+      aria-label={`View ${projectName} project`}
+      className="group block h-full rounded-[28px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accentBlue focus-visible:ring-offset-4 focus-visible:ring-offset-lightGray dark:focus-visible:ring-offset-[#050505]"
+    >
+      <article
+        className={`relative flex h-full min-h-[370px] w-full overflow-hidden rounded-[28px] border border-black/5 bg-white/55 p-2.5 font-primary shadow-[0_24px_70px_rgba(10,10,10,0.08)] backdrop-blur-2xl transition-all duration-500 ease-out hover:-translate-y-1 hover:border-accentBlue/25 hover:bg-white/80 hover:shadow-[0_32px_90px_rgba(59,130,246,0.18)] dark:border-white/10 dark:bg-white/[0.06] dark:shadow-[0_24px_70px_rgba(0,0,0,0.35)] dark:hover:bg-white/[0.09] ${
+          isFeatured ? "md:min-h-[410px]" : ""
+        }`}
+      >
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/70 via-white/10 to-accentBlue/10 opacity-80 transition-opacity duration-500 group-hover:opacity-100 dark:from-white/10 dark:via-white/[0.03] dark:to-accent/10" />
 
-                <div className="absolute bottom-4 left-4 right-4 bg-white/80 dark:bg-black/70 backdrop-blur-md border border-white/20 dark:border-white/10 p-4 rounded-xl flex justify-between items-center transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                    <div className="text-sm">
-                        <p className="font-semibold text-lg font-header text-black dark:text-white">{projectName}</p>
-                        <p className="font-normal text-black/70 dark:text-white/70 mt-1">{projectDescription}</p>
-                    </div>
-                </div>
-            </NextLink>
+        <div
+          className={`relative z-10 flex h-full w-full flex-col gap-5 ${
+            isFeatured ? "md:flex-row md:gap-6" : ""
+          }`}
+        >
+          <div
+            className={`relative overflow-hidden rounded-[22px] bg-black/5 dark:bg-white/5 ${
+              isFeatured ? "h-64 md:h-auto md:w-[58%]" : "h-52"
+            }`}
+          >
+            <Image
+              src={imageSrc}
+              alt={`${projectName} thumbnail`}
+              fill
+              sizes={isFeatured ? "(min-width: 768px) 620px, 100vw" : "(min-width: 768px) 330px, 100vw"}
+              className="object-cover transition duration-700 ease-out group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-45" />
+            <div className="absolute left-4 top-4 rounded-full border border-white/40 bg-white/75 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-black/70 shadow-sm backdrop-blur-md dark:border-white/15 dark:bg-black/40 dark:text-white/80">
+              {isFeatured ? "Featured" : "Project"}
+            </div>
+          </div>
+
+          <div
+            className={`flex flex-1 flex-col justify-between gap-6 px-2 pb-2 ${
+              isFeatured ? "pt-1 md:w-[42%] md:px-0 md:py-3" : ""
+            }`}
+          >
+            <div>
+              <div className="mb-4 flex items-center gap-3 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-accentBlue">
+                <span className="h-px w-7 bg-accentBlue/70" />
+                Selected Work
+              </div>
+
+              <h3
+                className={`font-header font-semibold leading-tight text-black dark:text-white ${
+                  isFeatured ? "text-2xl md:text-3xl" : "text-xl"
+                }`}
+              >
+                {projectName}
+              </h3>
+
+              <p className="mt-3 text-sm leading-6 text-darkGray/85 dark:text-white/65">
+                {projectDescription}
+              </p>
+            </div>
+
+            <div className="flex items-center justify-between border-t border-black/10 pt-4 dark:border-white/10">
+              <span className="text-sm font-medium text-black/65 transition-colors duration-300 group-hover:text-black dark:text-white/60 dark:group-hover:text-white/85">
+                View project
+              </span>
+              <span className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-black text-white transition-all duration-300 group-hover:rotate-45 group-hover:bg-accentBlue group-hover:shadow-lg group-hover:shadow-accentBlue/25 dark:border-white/10 dark:bg-white dark:text-black dark:group-hover:bg-accentBlue dark:group-hover:text-white">
+                <ArrowUpRight className="h-4 w-4" />
+              </span>
+            </div>
+          </div>
         </div>
-    )
+      </article>
+    </NextLink>
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;

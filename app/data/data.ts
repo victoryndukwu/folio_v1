@@ -1,14 +1,13 @@
-import { Mail } from "lucide-react";
+const contactEmail = "victoryndukwu7@gmail.com";
 
 const NavMenuItems = [
   {
-    name: "victoryndukwu7@gmail.com",
-    link: "/",
-    icon: Mail,
-  },
-  {
     name: "Work",
     link: "/work",
+  },
+  {
+    name: "About",
+    link: "/about",
   },
 ];
 
@@ -16,19 +15,22 @@ const projects = [
   {
     name: "Paydeet",
     url: "https://www.paydeet.com/",
-    description: "Open banking platform",
+    description:
+      "Open banking product experience focused on secure financial flows, responsive onboarding, and clear customer-facing interfaces.",
     imgUrl: "/paydeet.png",
   },
   {
     name: "Rever",
     url: "https://justrever.com/",
-    description: "Open banking platform",
+    description:
+      "Fintech web platform shaped around fast navigation, polished product storytelling, and dependable frontend implementation.",
     imgUrl: "/rever.png",
   },
   {
     name: "My Portfolio v1",
     url: "/",
-    description: "Victory's Personal Website",
+    description:
+      "Personal portfolio system exploring motion, typography, project presentation, and a flexible Next.js foundation.",
     imgUrl: "/victory.png",
   },
 ];
@@ -48,4 +50,4 @@ const articles = [
   },
 ];
 
-export { NavMenuItems, projects, articles };
+export { NavMenuItems, projects, articles, contactEmail };

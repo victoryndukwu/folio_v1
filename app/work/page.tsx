@@ -22,7 +22,7 @@ function WorkPage() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-start mx-auto gap-12 w-full max-w-2xl px-4 md:px-0 pt-32 pb-20 min-h-screen">
+    <main className="flex flex-col items-center justify-start mx-auto gap-12 w-full max-w-4xl px-4 md:px-6 lg:px-0 pt-32 pb-20 min-h-screen">
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -44,15 +44,20 @@ function WorkPage() {
         animate="visible"
       >
         {projects.map((project, idx) => {
-          // On the work page, let's just make the very first one featured, or none featured. Let's do none so it's an even grid.
+          const isFeatured = idx === 0;
+
           return (
-            <motion.div key={idx} variants={itemVariants} className="col-span-1">
+            <motion.div
+              key={idx}
+              variants={itemVariants}
+              className={isFeatured ? "md:col-span-2" : "col-span-1"}
+            >
               <ProjectCard
                 imageSrc={project.imgUrl}
                 projectName={project.name}
                 projectLink={project.url}
                 projectDescription={project.description}
-                isFeatured={false} // We don't span full width on the dedicated page to maintain a grid layout
+                isFeatured={isFeatured}
               />
             </motion.div>
           );
