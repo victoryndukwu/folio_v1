@@ -13,6 +13,20 @@ const NavMenuItems = [
 
 const projects = [
   {
+    name: "Konga Search Service (KSS)",
+    url: "https://kss.konga.com/",
+    description:
+      "Internal search indexing platform built to replace Algolia and improve product discovery across Konga's ecommerce ecosystem. I led the frontend implementation, building a fast, responsive search experience with debounced queries, cached results, ranking visibility, and scalable UI patterns using React, TypeScript, and modern state management Impact: Reduced yearly third-party search subscription costs by $77,000 while improving ownership, flexibility, and control over the search experience.",
+    imgUrl: "/kss.png",
+  },
+  {
+    name: "Konga E-commerce platform",
+    url: "https://www.konga.com/",
+    description:
+      "Konga is a Nigerian ecommerce platform with hundreds of thousands of users and sellers.",
+    imgUrl: "/konga.png",
+  },
+  {
     name: "Paydeet",
     url: "https://www.paydeet.com/",
     description:
@@ -27,11 +41,18 @@ const projects = [
     imgUrl: "/rever.png",
   },
   {
-    name: "My Portfolio v1",
-    url: "/",
+    name: "Lifteller",
+    url: "https://www.lifteller.com/",
     description:
-      "Personal portfolio system exploring motion, typography, project presentation, and a flexible Next.js foundation.",
-    imgUrl: "/victory.png",
+      "Lifteller is a new social platform built with the mission of bringing compassion back to social networking. We believe in creating a safe, inclusive space where meaningful connections thrive, and where users can support one another.",
+    imgUrl: "/lifteller.png",
+  },
+  {
+    name: "Konga Radio",
+    url: "https://www.kongafm.com/",
+    description:
+      "Konga Radio is a digital radio platform built to deliver smooth online audio streaming and engaging media experiences. I worked on the frontend implementation using Next.js and SCSS, focusing on a clean interface, responsive layout, and a seamless listening experience across devices.",
+    imgUrl: "/konga-radio.png",
   },
 ];
 
