@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
+import Button from "../Button";
 
 function HeroSection() {
   const words = "I build polished product interfaces that help teams ship faster and convert better.".split(" ");
@@ -65,19 +65,19 @@ function HeroSection() {
           transition={{ duration: 0.7, delay: 1.35, ease: "easeOut" }}
           className="mt-8 flex flex-col gap-3 sm:flex-row"
         >
-          <Link
+          <Button
             href="/work"
-            className="group inline-flex items-center justify-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white shadow-xl shadow-black/10 transition-all duration-300 hover:-translate-y-0.5 hover:bg-accentBlue hover:shadow-accentBlue/20 active:translate-y-0 dark:bg-white dark:text-black dark:hover:bg-accentBlue dark:hover:text-white"
+            className="group hover:-translate-y-0.5"
           >
             View selected work
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
-          <Link
+          </Button>
+          <Button
             href="/about"
-            className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white/55 px-6 py-3 text-sm font-semibold text-black/75 backdrop-blur-md transition-all duration-300 hover:border-accentBlue/40 hover:text-accentBlue dark:border-white/10 dark:bg-white/5 dark:text-white/75 dark:hover:text-white"
+            variant="secondary"
           >
             About Victory
-          </Link>
+          </Button>
         </motion.div>
       </div>
     </section>

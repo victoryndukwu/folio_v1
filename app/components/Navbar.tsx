@@ -6,6 +6,7 @@ import Logo from "./Logo";
 import { contactEmail, NavMenuItems } from "../data/data";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Button from "./Button";
 
 function Navbar() {
   const [menu, showMenu] = useState(false);
@@ -54,22 +55,25 @@ function Navbar() {
             ))}
           </div>
 
-          <button
+          <Button
             onClick={copyEmail}
-            className="group hidden md:flex items-center gap-2 rounded-full bg-black px-4 py-2 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-accentBlue hover:shadow-lg hover:shadow-accentBlue/25 active:translate-y-0 dark:bg-white dark:text-black dark:hover:bg-accentBlue dark:hover:text-white"
+            size="sm"
+            className="group hidden md:flex hover:-translate-y-0.5"
             title="Copy email"
           >
             {copied ? <Check className="h-4 w-4 text-green-400" /> : <Mail className="h-4 w-4" />}
             {copied ? "Copied" : "Email"}
-          </button>
+          </Button>
 
-          <button
+          <Button
             onClick={() => showMenu(!menu)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white/70 text-darkGray shadow-sm transition-all duration-300 hover:border-accentBlue/40 hover:text-accentBlue dark:border-white/10 dark:bg-white/10 dark:text-white md:hidden"
+            variant="secondary"
+            size="icon"
+            className="md:hidden"
             aria-label="Open navigation menu"
           >
             <Menu className="h-5 w-5" />
-          </button>
+          </Button>
         </div>
       </nav>
 
@@ -81,13 +85,14 @@ function Navbar() {
           className="absolute h-screen w-screen md:hidden top-0 left-0 flex flex-col px-4 bg-lightGray text-darkGray dark:bg-[#050505] dark:text-lightGray pointer-events-auto"
         >
           <div className="flex justify-end py-4">
-            <button
+            <Button
               onClick={() => showMenu(!menu)}
-              className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white/70 dark:border-white/10 dark:bg-white/10"
+              variant="secondary"
+              size="icon"
               aria-label="Close navigation menu"
             >
               <X className="h-5 w-5" />
-            </button>
+            </Button>
           </div>
 
           <div className="flex flex-1 flex-col items-center justify-center gap-6 text-4xl font-semibold font-header">
@@ -102,13 +107,13 @@ function Navbar() {
               </Link>
             ))}
 
-            <button
+            <Button
               onClick={(e) => handleEmailClick(e, true)}
-              className="mt-4 flex items-center gap-3 rounded-full bg-black px-6 py-3 text-base font-semibold font-primary text-white transition-all duration-300 hover:bg-accentBlue dark:bg-white dark:text-black dark:hover:bg-accentBlue dark:hover:text-white"
+              className="mt-4 font-primary text-base hover:-translate-y-0.5"
             >
               {copied ? <Check className="h-5 w-5 text-green-400" /> : <Mail className="h-5 w-5" />}
               {copied ? "Email copied" : "Copy email"}
-            </button>
+            </Button>
           </div>
 
           {copied && (

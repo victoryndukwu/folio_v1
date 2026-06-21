@@ -2,10 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Heading } from "../section-heading";
+import Button from "../Button";
 
 const focusAreas = [
   "Frontend architecture",
@@ -66,13 +66,14 @@ function AboutPreviewSection() {
             ))}
           </div>
 
-          <Link
+          <Button
             href="/about"
-            className="group mt-8 inline-flex items-center gap-2 text-sm font-semibold text-darkGray transition-colors duration-300 hover:text-accentBlue dark:text-white/75 dark:hover:text-accentBlue"
+            variant="secondary"
+            className="group mt-8"
           >
             Read the full story
             <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </Link>
+          </Button>
         </div>
       </motion.div>
     </section>

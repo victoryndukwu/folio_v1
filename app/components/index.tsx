@@ -1,4 +1,5 @@
 import LoadingScreen from "./LoadingScreen";
+import Button from "./Button";
 import Landing from "./Landing";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
@@ -12,6 +13,7 @@ import AboutPreviewSection from "./sections/about-preview-section";
 
 export {
     LoadingScreen,
+    Button,
     Landing,
     Logo,
     Navbar,

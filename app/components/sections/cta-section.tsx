@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
 import { contactEmail } from "@/app/data/data";
+import Button from "../Button";
 
 function CTASection() {
   const [copied, setCopied] = useState(false);
@@ -37,9 +38,10 @@ function CTASection() {
           I can help turn product ideas, messy interfaces, or ambitious launch timelines into polished web experiences.
         </p>
 
-        <button
+        <Button
           onClick={copyEmail}
-          className="group relative z-10 flex items-center gap-3 bg-black text-white dark:bg-white dark:text-black px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl hover:shadow-accent/20"
+          size="lg"
+          className="group relative z-10 hover:scale-105 active:scale-95"
         >
           <span>{copied ? "Email Copied!" : "Get In Touch"}</span>
           {copied ? (
@@ -47,7 +49,7 @@ function CTASection() {
           ) : (
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           )}
-        </button>
+        </Button>
       </motion.div>
     </section>
   );

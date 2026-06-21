@@ -3,6 +3,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { Mail } from "lucide-react";
 import { contactEmail, NavMenuItems } from "../data/data";
+import Button from "./Button";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -27,13 +28,14 @@ function Footer() {
               {item.name}
             </Link>
           ))}
-          <Link
+          <Button
             href={`mailto:${contactEmail}`}
-            className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/55 px-4 py-2 text-darkGray/80 transition-all duration-300 hover:border-accentBlue/40 hover:text-accentBlue dark:border-white/10 dark:bg-white/5 dark:text-white/65 dark:hover:text-white"
+            variant="secondary"
+            size="sm"
           >
             <Mail className="h-4 w-4" />
             Email
-          </Link>
+          </Button>
         </div>
       </div>
     </footer>

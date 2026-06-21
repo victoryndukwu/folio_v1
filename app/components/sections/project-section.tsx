@@ -3,8 +3,8 @@ import ProjectCard from "../ProjectCard";
 import { projects } from "../../data/data";
 import { Heading } from "../section-heading";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Button from "../Button";
 
 function ProjectSection() {
   const columnVariants = {
@@ -81,13 +81,14 @@ function ProjectSection() {
           viewport={{ once: true }}
           className="flex justify-center mt-4"
         >
-          <Link 
-            href="/work" 
-            className="group flex items-center gap-2 text-darkGray dark:text-white/80 font-medium hover:text-accentBlue dark:hover:text-accentBlue transition-colors duration-300"
+          <Button
+            href="/work"
+            variant="secondary"
+            className="group"
           >
             View All Projects
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          </Button>
         </motion.div>
       </div>
     </section>

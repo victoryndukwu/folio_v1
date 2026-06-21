@@ -95,7 +95,7 @@ function TechStackSection() {
                 className="group rounded-2xl border border-black/5 bg-white/50 p-5 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-accentBlue/25 hover:bg-white/75 hover:shadow-xl hover:shadow-accentBlue/10 dark:border-white/10 dark:bg-white/[0.04] dark:hover:bg-white/[0.07]"
               >
                 <div className="mb-5 flex items-center justify-between">
-                  <span className="grid h-11 w-11 place-items-center rounded-full bg-black text-white transition-colors duration-300 group-hover:bg-accentBlue dark:bg-white dark:text-black dark:group-hover:bg-accentBlue dark:group-hover:text-white">
+                  <span className="gradient-icon grid h-11 w-11 place-items-center rounded-full transition-all duration-300">
                     <Icon className="h-5 w-5" />
                   </span>
                   <span className="font-header text-xs text-accentBlue">

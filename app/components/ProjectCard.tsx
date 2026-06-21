@@ -88,7 +88,7 @@ function ProjectCard({
               <span className="text-sm font-medium text-black/65 transition-colors duration-300 group-hover:text-black dark:text-white/60 dark:group-hover:text-white/85">
                 View project
               </span>
-              <span className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-black text-white transition-all duration-300 group-hover:rotate-45 group-hover:bg-accentBlue group-hover:shadow-lg group-hover:shadow-accentBlue/25 dark:border-white/10 dark:bg-white dark:text-black dark:group-hover:bg-accentBlue dark:group-hover:text-white">
+              <span className="gradient-icon grid h-10 w-10 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45">
                 <ArrowUpRight className="h-4 w-4" />
               </span>
             </div>
