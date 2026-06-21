@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import Navbar from "./Navbar";
 import Container from "./Container";
 import ProjectCard from "./ProjectCard";
-
+import Footer from "./Footer";
 
 export {
     LoadingScreen,
@@ -12,5 +12,6 @@ export {
     Logo,
     Navbar,
     Container,
-    ProjectCard
+    ProjectCard,
+    Footer
 }

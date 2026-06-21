@@ -12,10 +12,10 @@ function ArticleSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <Heading align="left" weight="normal" italic className="font-header mb-6">
+        <Heading align="left" weight="normal" italic className="font-header mb-8 text-2xl">
           Articles
         </Heading>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col border-t border-black/10 dark:border-white/10">
           {articles.map((article, idx) => (
             <Article
               key={idx}

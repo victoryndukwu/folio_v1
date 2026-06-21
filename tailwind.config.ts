@@ -21,10 +21,22 @@ const config: Config = {
       colors: {
         gray: "#ecebeb",
         lightGray: "#fafafa",
-        darkGray: "#737373", // A softer gray for text
-        darkerGray: "#121212",
-        accent: "#3b82f6", // A subtle blue accent for hover states
+        darkGray: "#737373", 
+        darkerGray: "#0a0a0a", // Pitch black for premium dark mode
+        accent: "#8b5cf6", // Deep purple accent
+        accentBlue: "#3b82f6", // Electric blue
       },
+      animation: {
+        'blob': 'blob 10s infinite',
+      },
+      keyframes: {
+        blob: {
+          '0%': { transform: 'translate(0px, 0px) scale(1)' },
+          '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+          '100%': { transform: 'translate(0px, 0px) scale(1)' },
+        }
+      }
     },
   },
   plugins: [],

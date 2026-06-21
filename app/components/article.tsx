@@ -10,15 +10,15 @@ interface ArticleProps {
 }
 function Article({ title, date, url, duration }: ArticleProps) {
   return (
-    <Link href={url} className="group flex flex-col sm:flex-row justify-between sm:items-center p-4 -mx-4 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300">
-      <div className="flex flex-col gap-1">
-        <p className="text-lg font-medium group-hover:text-accent transition-colors duration-300 flex items-center gap-2">
+    <Link href={url} className="group flex flex-col sm:flex-row justify-between sm:items-center py-6 px-4 -mx-4 border-b border-black/5 dark:border-white/5 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300">
+      <div className="flex flex-col gap-1 sm:w-2/3 group-hover:translate-x-2 transition-transform duration-300">
+        <p className="text-lg font-medium font-header group-hover:text-accentBlue transition-colors duration-300 flex items-center gap-3">
           {title}
-          <ArrowUpRight className="w-4 h-4 opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300" />
         </p>
-        <div className="flex text-sm text-darkGray/80 items-center gap-2">
-          <p>{date}</p> <span>•</span> <p>{duration}</p>
-        </div>
+      </div>
+      <div className="flex text-sm text-darkGray sm:w-1/3 justify-end items-center gap-4 mt-2 sm:mt-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+        <p>{date}</p>
+        <ArrowUpRight className="w-5 h-5 text-accentBlue opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
       </div>
     </Link>
   );

@@ -60,52 +60,31 @@ function ProjectSection() {
         </Heading>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-4 p-4 grid-cols-1">
-        {/* Left Column */}
+      <div className="flex flex-col gap-8 mt-8">
         <motion.div
-          className="space-y-4"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
           variants={columnVariants}
           initial="hidden"
           animate="visible"
         >
-          {leftColumnProjects.map((project, idx) => (
-            <motion.div
-              key={idx}
-              variants={itemVariants}
-              whileHover={{ scale: 1.03 }}
-            >
-              <ProjectCard
-                imageSrc={project.imgUrl}
-                projectName={project.name}
-                projectLink={project.url}
-                projectDescription={project.description}
-              />
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Right Column */}
-        <motion.div
-          className="space-y-4"
-          variants={columnVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.2 }}
-        >
-          {rightColumnProjects.map((project, idx) => (
-            <motion.div
-              key={idx}
-              variants={rightItemVariants}
-              whileHover={{ scale: 1.03 }}
-            >
-              <ProjectCard
-                imageSrc={project.imgUrl}
-                projectName={project.name}
-                projectLink={project.url}
-                projectDescription={project.description}
-              />
-            </motion.div>
-          ))}
+          {projects.map((project, idx) => {
+            const isFeatured = idx === 0;
+            return (
+              <motion.div
+                key={idx}
+                variants={itemVariants}
+                className={isFeatured ? "md:col-span-2" : "col-span-1"}
+              >
+                <ProjectCard
+                  imageSrc={project.imgUrl}
+                  projectName={project.name}
+                  projectLink={project.url}
+                  projectDescription={project.description}
+                  isFeatured={isFeatured}
+                />
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

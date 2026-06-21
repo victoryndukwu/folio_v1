@@ -6,7 +6,7 @@ import ArticleSection from "./sections/articles-section";
 
 function Landing() {
   return (
-    <main className="flex flex-col items-center justify-center mx-auto gap-16 w-full max-w-2xl px-4 md:px-0 py-10">
+    <main className="flex flex-col items-center justify-center mx-auto gap-16 w-full max-w-2xl px-4 md:px-0 pt-32 pb-20">
       <HeroSection />
       <ProjectSection />
       <ArticleSection />

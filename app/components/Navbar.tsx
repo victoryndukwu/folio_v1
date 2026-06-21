@@ -36,12 +36,13 @@ function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 w-full backdrop-blur-md bg-lightGray/70 dark:bg-darkerGray/70 grid place-items-center py-6 transition-colors duration-300">
-      <div className="flex items-center justify-between w-full max-w-2xl px-4 md:px-0">
-        <Logo />
+    <div className="fixed top-6 z-50 w-full flex justify-center px-4 pointer-events-none">
+      <nav className="pointer-events-auto backdrop-blur-2xl bg-white/40 dark:bg-black/40 border border-black/5 dark:border-white/10 rounded-full py-3 px-6 shadow-2xl transition-all duration-300 hover:bg-white/60 dark:hover:bg-black/60">
+        <div className="flex items-center gap-8">
+          <Logo />
 
-        {/* Desktop Nav */}
-        <div className="md:flex text-base hidden">
+          {/* Desktop Nav */}
+          <div className="md:flex text-sm hidden font-medium">
           {NavMenuItems.map((item, idx) => (
             <div key={idx}>
               {item.name === "victoryndukwu7@gmail.com" ? (
@@ -70,13 +71,14 @@ function Navbar() {
               )}
             </div>
           ))}
-        </div>
+          </div>
 
-        {/* Mobile Menu Button */}
-        <div className="hover:cursor-pointer p-1 md:hidden">
-          <p onClick={() => showMenu(!menu)}>MENU</p>
+          {/* Mobile Menu Button */}
+          <div className="hover:cursor-pointer p-1 md:hidden">
+            <p onClick={() => showMenu(!menu)}>MENU</p>
+          </div>
         </div>
-      </div>
+      </nav>
 
       {/* Mobile Nav */}
       {menu && (
@@ -150,7 +152,7 @@ function Navbar() {
           Email copied to clipboard!
         </motion.div>
       )}
-    </nav>
+    </div>
   );
 }
 
