@@ -15,7 +15,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        primary: ["var(--font-quicksand)", ...fontFamily.sans],
+        primary: ["var(--font-poppins)", ...fontFamily.sans],
         header: ["var(--font-unbounded)", ...fontFamily.sans],
       },
       colors: {

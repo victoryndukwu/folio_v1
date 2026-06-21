@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar, Footer } from "./components";
 import ThemeSwitch from "./components/ThemeSwitch";
-import { quicksand, unbounded } from "@/utils/fonts";
+import { poppins, unbounded } from "@/utils/fonts";
 
 export const metadata: Metadata = {
   title: "Victory Ndukwu | Frontend Engineer",
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${quicksand.variable} ${unbounded.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${unbounded.variable}`}>
       <body className={`flex flex-col items-center bg-lightGray text-darkGray dark:bg-darkerGray dark:text-gray font-primary antialiased no-scrollbar transition-colors duration-300 min-h-screen relative overflow-x-hidden`}>
         {/* Ambient background glow */}
         <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">

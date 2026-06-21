@@ -1,6 +1,4 @@
 import React from "react";
-import { quicksand } from "@/utils/fonts";
-
 
 export type HeadingLevel = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
@@ -52,7 +50,7 @@ const weightStyles: Record<NonNullable<HeadingProps["weight"]>, string> = {
 export const Heading: React.FC<HeadingProps> = ({
   level = "h4",
   children,
-  className = `font-serif ${quicksand.className}`,
+  className = "font-header",
   align = "left",
   color = "default",
   weight,
