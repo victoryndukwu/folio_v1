@@ -16,11 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} ${unbounded.variable}`}>
-      <body className={`flex flex-col items-center bg-lightGray text-darkGray dark:bg-darkerGray dark:text-gray font-primary antialiased no-scrollbar transition-colors duration-300 min-h-screen relative overflow-x-hidden`}>
+      <body className={`flex flex-col items-center bg-lightGray text-darkGray dark:bg-[#050505] dark:text-white/90 font-primary antialiased no-scrollbar transition-colors duration-700 ease-in-out min-h-screen relative overflow-x-hidden`}>
         {/* Ambient background glow */}
         <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-accent/20 dark:bg-accent/10 blur-[120px] animate-blob mix-blend-multiply dark:mix-blend-screen" />
-          <div className="absolute top-[20%] right-[-10%] w-[40%] h-[40%] rounded-full bg-accentBlue/20 dark:bg-accentBlue/10 blur-[120px] animate-blob animation-delay-2000 mix-blend-multiply dark:mix-blend-screen" />
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-accent/30 dark:bg-accent/20 blur-[120px] animate-blob mix-blend-multiply dark:mix-blend-screen transition-opacity duration-700" />
+          <div className="absolute top-[20%] right-[-10%] w-[40%] h-[40%] rounded-full bg-accentBlue/30 dark:bg-accentBlue/20 blur-[120px] animate-blob animation-delay-2000 mix-blend-multiply dark:mix-blend-screen transition-opacity duration-700" />
         </div>
         
         <Navbar />
