@@ -5,20 +5,20 @@ import { motion } from "framer-motion";
 
 const proofPoints = [
   {
-    value: "6+",
-    label: "years building production frontend experiences",
+    value: "6+ yrs",
+    label: "building reliable digital products from concept to launch",
   },
   {
-    value: "Fintech",
-    label: "open banking and product-platform experience",
+    value: "Product UI",
+    label: "dashboards, onboarding journeys, ecommerce, fintech, and platform experiences",
   },
   {
-    value: "React",
-    label: "Next.js, TypeScript, Tailwind, and modern UI systems",
+    value: "Systems",
+    label: "scalable component architecture, design systems, state, and data workflows",
   },
   {
-    value: "UX",
-    label: "performance, accessibility, motion, and polish",
+    value: "Agentic AI",
+    label: "leveraging coding agents to move faster from requirement to polished implementation",
   },
 ];
 

@@ -8,23 +8,23 @@ import Button from "@/app/components/Button";
 const highlights = [
   {
     value: "6+",
-    label: "years of frontend experience",
+    label: "years of frontend engineering experience",
   },
   {
-    value: "Product",
-    label: "interfaces, dashboards, and onboarding flows",
+    value: "SaaS UI",
+    label: "dashboards, onboarding flows, and reusable component systems",
   },
   {
     value: "Fintech",
-    label: "open banking and conversion-focused web work",
+    label: "open banking, payments, and high-conversion web platforms",
   },
 ];
 
 const principles = [
-  "Make the first interaction feel obvious.",
-  "Keep design systems useful, not ornamental.",
+  "Make the first interaction clear and intuitive.",
+  "Keep design systems practical, scalable, and easy to use.",
   "Ship interfaces that are fast, accessible, and maintainable.",
-  "Use motion to clarify state, not distract from the product.",
+  "Use motion to communicate state, not decorate the product.",
 ];
 
 const stack = [
@@ -145,12 +145,13 @@ function AboutPage() {
           </div>
 
           <div className="mt-8 rounded-2xl border border-black/5 bg-white/50 p-6 shadow-sm backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04]">
-            <p className="font-header text-lg font-semibold text-black dark:text-white">
-              Current focus
-            </p>
-            <p className="mt-3 text-sm leading-7 text-darkGray/85 dark:text-white/62">
-              Building sharper portfolio and product experiences, improving frontend systems, and helping teams move from idea to polished interface with less friction.
-            </p>
+           <p className="font-header text-lg font-semibold text-black dark:text-white">
+  Current focus
+</p>
+
+<p className="mt-3 text-sm leading-7 text-darkGray/85 dark:text-white/62">
+  Creating scalable frontend systems, refining product experiences, and shipping clean interfaces that help teams move faster from concept to execution.
+</p>
           </div>
         </div>
       </section>
