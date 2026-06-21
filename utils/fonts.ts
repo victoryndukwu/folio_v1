@@ -1,23 +1,15 @@
-import { Michroma, Unbounded, Orbitron, Quicksand } from "next/font/google";
-
-export const michroma = Michroma({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-michroma",
-  weight: "400",
-});
+import { Unbounded, Poppins } from "next/font/google";
 
 export const unbounded = Unbounded({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-unbounded",
 });
 
-export const orbitron = Orbitron({
+export const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-poppins",
 });
 
-export const quicksand = Quicksand({
-  subsets: ["latin"],
-  display: "swap",
-});
