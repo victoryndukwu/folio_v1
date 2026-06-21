@@ -1,28 +1,26 @@
 import Link from "next/link";
 import React from "react";
-import { michroma } from "../../utils/fonts";
 import Image from "next/image";
+import Heading from "./section-heading";
 
 function Logo() {
   return (
-    <Link
-      href="/"
-      className={`hover:cursor-pointer ${michroma.className} flex items-center gap-2`}
-    >
+    <Link href="/" className={`hover:cursor-pointer  flex items-center gap-2`}>
       <div>
         <Image
           src={"/portfolio.jpg"}
           alt=""
-          width={70}
-          height={70}
-          className="text-xs rounded-full size-[48px]"
+          width={50}
+          height={50}
+          className="text-xs size-[40px] rounded-md shadow"
         />
       </div>
       <div className="flex flex-col gap-[1px]">
-        <p className={`hover:cursor-pointer font-bold ${michroma} text-[10px]`}>
-          VICTORY NDUKWU
-        </p>
-        <p className="text-[10px]">FRONTEND ENGINEER</p>
+        <Heading level="h5" align="left" weight="normal" italic>
+          {" "}
+          Victory Ndukwu
+        </Heading>
+        <p className="text-[14px]">Frontend Engineer</p>
       </div>
     </Link>
   );
