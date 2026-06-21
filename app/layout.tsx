@@ -6,7 +6,7 @@ import { poppins, unbounded } from "@/utils/fonts";
 
 export const metadata: Metadata = {
   title: "Victory Ndukwu | Frontend Engineer",
-  description: "Victory Ndukwu is a Frontend engineer with 3 years experience",
+  description: "Victory Ndukwu is a Frontend engineer with 6 years experience",
 };
 
 export default function RootLayout({

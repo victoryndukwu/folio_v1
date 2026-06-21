@@ -18,7 +18,7 @@ function page() {
           <div className='text-justify text-sm'>
             <p className='text-2xl text-lightGray font-medium'>Hi, I am Shady</p>
             <p>
-              a computer science graduate and passionate frontend engineer with over 3 years of experience. I specialize in creating intuitive user interfaces that blend functionality and aesthetics.
+              a computer science graduate and passionate frontend engineer with over 6 years of experience. I specialize in creating intuitive user interfaces that blend functionality and aesthetics.
 
               My skills include Vue JS, React JS, Next JS, Tailwind CSS, SCSS, and Typescript. I also enhance user experiences with animations using GSAP and Framer Motion.
 

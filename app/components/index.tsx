@@ -5,6 +5,8 @@ import Navbar from "./Navbar";
 import Container from "./Container";
 import ProjectCard from "./ProjectCard";
 import Footer from "./Footer";
+import TechStackSection from "./sections/tech-stack-section";
+import CTASection from "./sections/cta-section";
 
 export {
     LoadingScreen,
@@ -13,5 +15,7 @@ export {
     Navbar,
     Container,
     ProjectCard,
-    Footer
+    Footer,
+    TechStackSection,
+    CTASection
 }
