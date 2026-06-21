@@ -6,10 +6,10 @@ const NavMenuItems = [
     link: "/",
     icon: Mail,
   },
-  // {
-  //   name: "Work",
-  //   link: "/work",
-  // },
+  {
+    name: "Work",
+    link: "/work",
+  },
 ];
 
 const projects = [

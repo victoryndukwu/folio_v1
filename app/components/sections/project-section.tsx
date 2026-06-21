@@ -3,6 +3,8 @@ import ProjectCard from "../ProjectCard";
 import { projects } from "../../data/data";
 import { Heading } from "../section-heading";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 function ProjectSection() {
   const leftColumnProjects = projects.filter((_, idx) => idx % 2 === 0);
@@ -67,7 +69,7 @@ function ProjectSection() {
           initial="hidden"
           animate="visible"
         >
-          {projects.map((project, idx) => {
+          {projects.slice(0, 2).map((project, idx) => {
             const isFeatured = idx === 0;
             return (
               <motion.div
@@ -85,6 +87,21 @@ function ProjectSection() {
               </motion.div>
             );
           })}
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="flex justify-center mt-4"
+        >
+          <Link 
+            href="/work" 
+            className="group flex items-center gap-2 text-darkGray dark:text-white/80 font-medium hover:text-accentBlue dark:hover:text-accentBlue transition-colors duration-300"
+          >
+            View All Projects
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </motion.div>
       </div>
     </section>
